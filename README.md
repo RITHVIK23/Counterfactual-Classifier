@@ -1,24 +1,29 @@
-1. Introduction:
-The project aims to support individuals in improving their health behaviors by employing Natural Language Processing (NLP) to classify counterfactual thoughts related to managing chronic conditions like diabetes. It uses machine learning models to automate the analysis of counterfactual thinking, such as whether individuals wish they had made different choices regarding their blood glucose regulation.
+# Natural Language Generation for Counterfactual Intervention
 
-2. Data Collection and Organization:
-The data was gathered through surveys from participants reflecting on their blood glucose levels and behaviors. These surveys prompted participants to recall negative events related to their blood glucose levels, generate counterfactual thoughts, and reflect on potential behavioral changes. The collected data includes various labels, such as whether the thought was counterfactual, its direction (upward or downward), its structure (additive, subtractive, or substitutive), and more.
+### Overview
+This project utilizes Natural Language Processing (NLP) and machine learning techniques to analyze counterfactual thinking in health-related behavior change. Specifically, it focuses on reflecting upon blood glucose management and behavioral adjustments for individuals with diabetes. The system categorizes and classifies participants' counterfactual statements to better understand their health behavior intentions and enhance personalized interventions.
 
-3. Methods:
-This section describes the identification and classification of counterfactuals based on several criteria, such as direction, structure, focus, controllability, and specificity. The methods also involved tokenizing text using BERT and Byte Pair Encoding (BPE), followed by training classifiers to predict various labels associated with counterfactuals.
+### Data
+The data was collected from surveys where participants reflected on instances of elevated blood glucose levels. The survey consisted of:
 
-4. Evaluation and Results:
-The report compares the performance of different classifiers:
+### Negative Event Recall: Participants described situations where their blood glucose exceeded 140 mg/dL.
+Counterfactual Thinking: Participants generated "If only I...then..." statements to reflect on alternative behaviors they could have performed to improve glucose levels.
+Follow-Up: Participants rated the likelihood of applying the counterfactual strategies in the upcoming week.
 
-Logistic Regression: Served as a baseline model and showed reasonable results but struggled with capturing complex patterns, especially with imbalanced classes.
-XGBoost: Performed better by handling both binary and multi-class classification tasks more efficiently, though it also struggled with minority subclasses.
-MLP (Multi-Layer Perceptron): Showed promising results, particularly in terms of consistent performance across various labels, though variations existed for certain subclasses.
-5. Evaluation Metrics:
-You discussed several key metrics:
+#### Methods
+The project involves the manual labeling of counterfactual statements based on criteria such as:
 
-Precision: Measures the accuracy of positive predictions.
-Recall: Measures how well the model identifies all positive instances.
-F1 Score: A balance between precision and recall, particularly useful for imbalanced datasets.
-6. Figures and Visuals:
-Word Cloud Analysis: Helped to visualize common themes in the text data.
-Confusion Matrices: Showed the performance of the XGBoost classifier across different labels.
+Direction of Counterfactuals: Upward or downward counterfactuals.
+Behavioral Intentions: Identifying key elements in participants' reflections to assess their potential for behavior change.
+
+### Requirements
+Python 3.x
+Necessary libraries: pandas, numpy, sklearn, nltk, tensorflow, etc.
+
+### Usage
+Clone the repository or download the files.
+Install the required libraries:
+pip install -r requirements.txt
+Run the analysis script to begin processing the counterfactual data.
+### License
+This project is licensed under the MIT License - see the LICENSE file for details.
